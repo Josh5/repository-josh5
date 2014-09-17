@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+<addon
+  id="webinterface.tiny"
+  version="0.1.6"
+  name="TinyUI"
+  provider-name="TinyHTPC.co.nz">
+  <requires>
+    <import addon="xbmc.gui" version="5.0.0"/>
+    <import addon="service.web.maraschino" version="3.1.0"/>
+    <import addon="script.module.simplejson" version="2.0.10" optional="true"/>
+  </requires>
+  <extension
+    point="xbmc.gui.webinterface"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">TinyUI - Webinterface desigen for integration between XBMC and Maraschino</summary>
+    <description lang="en">This interface is designed to be installed along side Maraschino.
+      Once installed, you can use this webinterface to control the Audio/Video-Section of XBMC: play/pause/stop/skip, show artists/albums/movies/tv shows and play them or add them to the playlist. It's designed for use on PCs or laptops with a browser like FireFox which supports JavaScript.
+
+Minimum requirements: XBMC 10.0-beta3 (tested on Ubuntu Karmic Koala)
+Tested Browsers:
+   - FireFox 27.0.1 on Ubuntu 12.04
+   - Internet Explorer 8 (does not support round edges)
+Not supported: Internet Explorer 6 or 7
+   - Safari 7.0.5 on Mavricks 10.9.4 (does not support Private Browsing)
+
+Hint: You may need to clear your browser-cache before you open the new installed/updated webinterface in your browser.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="service.downloadmanager.transmission"
+       name="Transmission-daemon for Cortex-A9"
+       version="1.0.12"
+       provider-name="TinyHTPC.co.nz">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.service"
+             library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Transmission: a fast, easy and free BitTorrent client</summary>
+    <description>
+Transmission is a fast, easy and free BitTorrent client.
+Ported from OpenELEC transmission add-on, this has be re-compiled for Cortex-A9.
+Transmission can be accessed on a remote web browser via: http://[xbmcIP]:9091
+    </description>
+    <disclaimer>
+
+    </disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="service.web.maraschino"
+       name="maraschino"
+       version="4.1.0"
+       provider-name="unofficial.addon.pro">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.service"
+             library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Maraschino: Web interface to act as a nice overview/front page for my XBMC HTPC</summary>
+    <description>
+Maraschino is an XBMC web interface with customisable applications module providing quick access to your web interfaces (e.g. SABnzb+, SickBeard, or whatever else you want to link to), recently added episodes module, media library browser, currently playing bar and disk space module.
+    </description>
+    <disclaimer>
+
+    </disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.xbmctorrent" name="XBMCtorrent" version="0.6.4" provider-name="steeve">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.repository" name="XBMCtorrent Autoupdate Repository">
+        <info compressed="false">http://xbmctorrent.herokuapp.com/addons.xml</info>
+        <checksum>http://xbmctorrent.herokuapp.com/addons.xml.md5</checksum>
+        <datadir zip="true">http://xbmctorrent.herokuapp.com/</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <website><![CDATA[http://j.mp/xbmctorrent]]></website>
+        <forum><![CDATA[http://j.mp/xbmctorrent]]></forum>
+        <source><![CDATA[https://github.com/steeve/xbmctorrent]]></source>
+        <language></language>
+        <license><![CDATA[GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007]]></license>
+        <summary><![CDATA[XBMCtorrent: Torrent streaming for XBMC.]]></summary>
+        <description><![CDATA[Watch torrents directly from XBMC, without waiting.
+
+To get the latest updates:
+Twitter: twitter.com/xbmctorrent
+Facebook: facebook.com/xbmctorrent
+XBMC HUB: j.mp/xbmctorrent]]></description>
+    </extension>
+</addon>
+
+<addon id="service.downloadmanager.InternetPVR"
+       name="Internet PVR Suite"
+       version="1.1.2"
+       provider-name="TinyHTPC.co.nz">
+  <requires>
+    <import addon="xbmc.addon" version="12.0.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.downloadmanager.transmission" version="0.1.0"/>
+  </requires>
+  <extension point="xbmc.python.script"
+             library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service"
+             library="service.py">
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">InternetPVR is a Media tracking suit which combines the programs: SickBeard, CouchPotato V2 and Headphones in one Addon</summary>
+    <description lang="en">
+ - Sickbeard: Tracks your TVShows and automatically downloads the next one when it becomes available.
+ - Couchpotato: Automatically searches for and downloads your Movie torrents according to your requests.
+ - Headphones: Automatically searches for and downloads Music.
+
+InternetPVR is a fork of lsellens' SickPotatoHead.
+    </description>
+    <platform>linux</platform>
+  </extension>
+</addon>
+
+<addon id="repository.tinyhtpc.xbmc-addons" name="TinyHTPC XBMC Add-on Repository" version="1.0.2" provider-name="TinyHTPC.co.nz">
+    <extension point="xbmc.addon.repository" name="TinyHTPC XBMC Add-on Repository">
+        <info compressed="false">https://raw.githubusercontent.com/Josh5/repository-josh5/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/Josh5/repository-josh5/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/Josh5/repository-josh5/master/repo</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Install TinyHTPC Addons</summary>
+        <description>Download and install addons by Josh.5 - TinyHTPC.co.nz</description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="script.service.audo"
+       name="audo-ARMv7"
+       version="1.1.0"
+       provider-name="lsellens - ported by Josh.5">
+  <requires>
+    <import addon="xbmc.addon" version="12.0.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+
+  </requires>
+  <extension point="xbmc.python.script"
+             library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service"
+             library="service.py">
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Audo (Automatic Downloader) is a fork of SABnzbd-Suite. SABnzbd-Suite Metapackage which combines SABnzbd, SickBeard, Couchpotato and Headphones in one Addon</summary>
+    <summary lang="nl">Audo (Automatische Downloader) is een afsplitsing van SABnzbd-Suite. Sabnzbd-Suite metapackage die SABNZBD, SickBeard, Couchpotato en Headphones combineert in een add-on.</summary>
+    <summary lang="fr">Audo (pour Automatic Downloader) est un fork de SABnzbd-Suite. SABnzbd-Suite méta-paquet qui combine SABnzbd, SickBeard, Couchpotato et Headphones dans un add-on.</summary>
+    <summary lang="pt">O Audo (Automatic Downloader) é uma derivação da SABnzbd-Suite. O Metapacote SABnzbd-Suite combina o SABnzbd, SickBeard, Couchpotato e Headphones num único Addon</summary>
+    <description lang="en">Audo (Automatic Downloader) is a fork of SABnzbd-Suite. Updated frequently to newest versions of SAB, SB(mr.orange branch), CPv2, and HP.</description>
+    <description lang="nl">Audo (Automatische Downloader) is een afsplitsing van SABnzbd-Suite. Wordt frequent geüpdatet naar de nieuwste versies van SAB, SB-mr.orange Branch, CPv2, en HP.</description>
+    <description lang="fr">Audo (pour Automatic Downloader) est un fork de SABnzbd-Suite. Mis à jour fréquemment vers les nouvelles versions de la branche SAB, SB-mr.orange, CPv2 et HP.</description>
+    <description lang="pt">O Audo (Automatic Downloader) é uma derivação da SABnzbd-Suite. É actualizado frequentemente para as mais recentes versões de SAB, ramo SB-mr.orange, CPv2, e HP.</description>
+    <platform>linux</platform>
+  </extension>
+</addon>
+</addons>
