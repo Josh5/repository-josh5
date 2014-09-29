@@ -150,7 +150,7 @@ InternetPVR is a fork of lsellens' SickPotatoHead.
 
 <addon id="script.service.audo"
        name="audo-ARMv7"
-       version="1.1.0"
+       version="1.1.1"
        provider-name="lsellens - ported by Josh.5">
   <requires>
     <import addon="xbmc.addon" version="12.0.0"/>
