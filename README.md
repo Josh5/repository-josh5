@@ -4,7 +4,7 @@ XBMC Repository - Josh.5 Addons
 XBMC Add-on Repository maintained by me, Josh.5
 
 * Author: Josh Sunnex (tinyhtpc@gmail.com)
-* Version: 1.0.0
+* Version: 1.0.3
 * Source: Private
 
 ## Introduction

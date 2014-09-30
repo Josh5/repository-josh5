@@ -135,11 +135,11 @@ InternetPVR is a fork of lsellens' SickPotatoHead.
   </extension>
 </addon>
 
-<addon id="repository.tinyhtpc.xbmc-addons" name="TinyHTPC XBMC Add-on Repository" version="1.0.2" provider-name="TinyHTPC.co.nz">
+<addon id="repository.tinyhtpc.xbmc-addons" name="TinyHTPC XBMC Add-on Repository" version="1.0.3" provider-name="TinyHTPC.co.nz">
     <extension point="xbmc.addon.repository" name="TinyHTPC XBMC Add-on Repository">
-        <info compressed="false">https://raw.githubusercontent.com/Josh5/repository-josh5/master/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/Josh5/repository-josh5/master/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.githubusercontent.com/Josh5/repository-josh5/master/repo</datadir>
+        <info compressed="false">https://bitbucket.org/Josh5/repository-josh5/raw/51c79512259ef99d4531bffbc0db135e146fbc76/addons.xml</info>
+        <checksum>https://bitbucket.org/Josh5/repository-josh5/raw/51c79512259ef99d4531bffbc0db135e146fbc76/addons.xml.md5</checksum>
+        <datadir zip="true">https://bitbucket.org/Josh5/repository-josh5/raw/51c79512259ef99d4531bffbc0db135e146fbc76/repo</datadir>
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary>Install TinyHTPC Addons</summary>
